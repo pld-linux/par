@@ -7,6 +7,7 @@ License:	MPL
 Vendor:		David Williams <djw@djw.org>
 Group:		Development/Building
 Source0:	http://www.djw.org/product/palm/par/prc.tgz
+# Source0-md5:	c20a295b05c598322d037ecd36a28e38
 URL:		http://www.djw.org/product/palm/par/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
