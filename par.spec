@@ -1,19 +1,20 @@
-Summary:	palm's pdb/prc file manipulator
-Summary(pl):	program do manipulacji palmowymi plikami pdb/prc
+Summary:	Palm's pdb/prc file manipulator
+Summary(pl):	Program do manipulacji palmowymi plikami pdb/prc
 Name:		par
 Version:	00.05.01
 Release:	0.1
 License:	MPL
-Group:		-
+Vendor:		David Williams <djw@djw.org>
 Group:		Development/Building
 Source0:	http://www.djw.org/product/palm/par/prc.tgz
 URL:		http://www.djw.org/product/palm/par/
-Vendor:		David Williams <djw@djw.org>
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Palm's pdb/prc file manipulator.
 
 %description -l pl
+Program do manipulacji palmowymi plikami pdb/prc.
 
 %prep
 %setup -q -n %{name}-%{version}.orig -a 1
