@@ -17,24 +17,29 @@ Palm's pdb/prc file manipulator.
 Program do manipulacji palmowymi plikami pdb/prc.
 
 %prep
-%setup -q -n %{name}-%{version}.orig -a 1
-%patch0 -p1
+%setup -q -n prc
 
 %build
 rm -f missing
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -Wall -I."
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir},%{_bindir},%{_mandir}/man1}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+install prc.h $RPM_BUILD_ROOT%{_includedir}
+install libprc.a $RPM_BUILD_ROOT%{_libdir}
+install par $RPM_BUILD_ROOT%{_bindir}
+install par.man $RPM_BUILD_ROOT%{_mandir}/man1/par.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
+%{_libdir}/lib*.a
+%{_includedir}/prc.h
+%{_mandir}/man1/*.1*
