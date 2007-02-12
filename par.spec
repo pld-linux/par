@@ -1,5 +1,5 @@
 Summary:	Palm's pdb/prc file manipulator
-Summary(pl):	Program do manipulacji palmowymi plikami pdb/prc
+Summary(pl.UTF-8):   Program do manipulacji palmowymi plikami pdb/prc
 Name:		par
 Version:	00.05.01
 Release:	0.1
@@ -14,7 +14,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Palm's pdb/prc file manipulator.
 
-%description -l pl
+%description -l pl.UTF-8
 Program do manipulacji palmowymi plikami pdb/prc.
 
 %prep
